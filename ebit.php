@@ -18,7 +18,7 @@
                                     <div class="card-body">
                                         <div class="avatar bg-rgba-info p-50 m-0 mb-1">
                                             <div class="avatar-content">
-                                                <i class="feather icon-plus text-info font-medium-5"></i>
+                                                <i class="fa fa-money text-info font-medium-5"></i>
                                             </div>
                                         </div>
                                         <h2 class="text-bold-700">3.5 M</h2>
@@ -31,9 +31,9 @@
                             <div class="card text-center">
                                 <div class="card-content">
                                     <div class="card-body">
-                                        <div class="avatar bg-rgba-warning p-50 m-0 mb-1">
+                                        <div class="avatar bg-rgba-info p-50 m-0 mb-1">
                                             <div class="avatar-content">
-                                                <i class="feather icon-file-text text-info font-medium-5"></i>
+                                                <i class="fa fa-users text-info font-medium-5"></i>
                                             </div>
                                         </div>
                                         <h2 class="text-bold-700">16</h2>
@@ -46,9 +46,9 @@
                             <div class="card text-center">
                                 <div class="card-content">
                                     <div class="card-body">
-                                        <div class="avatar bg-rgba-warning p-50 m-0 mb-1">
+                                        <div class="avatar bg-rgba-info p-50 m-0 mb-1">
                                             <div class="avatar-content">
-                                                <i class="feather icon-file-text text-info font-medium-5"></i>
+                                                <i class="fa fa-briefcase text-info font-medium-5"></i>
                                             </div>
                                         </div>
                                         <h2 class="text-bold-700">7</h2>
@@ -61,9 +61,9 @@
                             <div class="card text-center">
                                 <div class="card-content">
                                     <div class="card-body">
-                                        <div class="avatar bg-rgba-warning p-50 m-0 mb-1">
+                                        <div class="avatar bg-rgba-info p-50 m-0 mb-1">
                                             <div class="avatar-content">
-                                                <i class="feather icon-file-text text-info font-medium-5"></i>
+                                                <i class="fa fa-heart text-info font-medium-5"></i>
                                             </div>
                                         </div>
                                         <h2 class="text-bold-700">36</h2>
@@ -73,6 +73,58 @@
                             </div>
                         </div>
 </div>
+
+
+<div class="row">
+                        <div class="col-xl-4 col-md-6 col-sm-6">
+                            <div class="card text-center">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="avatar bg-rgba-info p-50 m-0 mb-1">
+                                            <div class="avatar-content">
+                                                <i class="fa fa-user-plus text-info font-medium-5"></i>
+                                            </div>
+                                        </div>
+                                        <h2 class="text-bold-700">6</h2>
+                                        <p class="mb-0 line-ellipsis">Alliances</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-sm-6">
+                            <div class="card text-center">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="avatar bg-rgba-info p-50 m-0 mb-1">
+                                            <div class="avatar-content">
+                                                <i class="fa fa-angellist text-info font-medium-5"></i>
+                                            </div>
+                                        </div>
+                                        <h2 class="text-bold-700">5</h2>
+                                        <p class="mb-0 line-ellipsis">Community Projects</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-sm-6">
+                            <div class="card text-center">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="avatar bg-rgba-info p-50 m-0 mb-1">
+                                            <div class="avatar-content">
+                                                <i class="fa fa-line-chart text-info font-medium-5"></i>
+                                            </div>
+                                        </div>
+                                        <h2 class="text-bold-700">17.43</h2>
+                                        <p class="mb-0 line-ellipsis">Stock Price (Close)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+</div>
+
+
          
 <div class="row">
 
@@ -136,14 +188,28 @@
 
                     <div class="row">
                         <!-- Pie Chart -->
-                        <div class="col-lg-12 col-md-12">
+                        <div class="col-lg-6 col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Advance Due From Subco</h4>
+                                    <h4 class="card-title">Hires Vs Termination</h4>
                                 </div>
                                 <div class="card-content">
                                     <div class="card-body">
-                                    <div id="line-chart-advancedue"></div>
+                                    <div id="column-chart"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-lg-6 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Control Issues</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                    <div id="column-chart-control"></div>
                                     </div>
                                 </div>
                             </div>
@@ -159,11 +225,11 @@
                         <div class="col-lg-12 col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Net Payable</h4>
+                                    <h4 class="card-title">Sales quantity CY vs PY</h4>
                                 </div>
                                 <div class="card-content">
                                     <div class="card-body">
-                                    <div id="bar-chart-netpayable"></div>
+                                    <div id="line-area-chart-quantity"></div>
                                     </div>
                                 </div>
                             </div>
@@ -172,42 +238,73 @@
 <div class="row">
 
                         <!-- Donut Chart -->
-                        <div class="col-lg-12 col-md-6">
+                        <div class="col-lg-6 col-md-6">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Subco Balance</h4>
+                                    <h4 class="card-title">FTEs</h4>
                                 </div>
                                 <div class="card-content">
                                     <div class="card-body">
-                                    <div id="line-chart-subbal"></div>
+                                    <div id="bar-chart-fte"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                   
+                        <div class="col-xl-6 col-md-12 col-sm-12">
+                            <div class="card text-center">
+                           
+                                <div class="card-header d-flex justify-content-between">
+                                    <h4 class="card-title">Expenditure by Department</h4>
+                                   
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                    <div id="column-chart-exp"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                       
                     </div>
 
 
                     <div class="row">
 
-                        <div class="col-xl-12 col-md-12 col-sm-12">
-                            <div class="card text-center">
-                           
-                                <div class="card-header d-flex justify-content-between">
-                                    <h4 class="card-title">Balance - Suppliers</h4>
-                                   
-                                </div>
-                                <div class="card-content">
-                                    <div class="card-body">
-                                    <div id="sales-line-chart-subbal"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                     
-                    </div>
+<!-- Donut Chart -->
+<div class="col-lg-6 col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Leave Balances</h4>
+        </div>
+        <div class="card-content">
+            <div class="card-body">
+            <div id="pie-chart-capex"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-xl-6 col-md-12 col-sm-12">
+    <div class="card text-center">
+   
+        <div class="card-header d-flex justify-content-between">
+            <h4 class="card-title">Capex</h4>
+           
+        </div>
+        <div class="card-content">
+            <div class="card-body">
+            <div class="height-300">
+                                            <canvas id="bar-chart-capex"></canvas>
+                                        </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
                 
                   
                 </section>

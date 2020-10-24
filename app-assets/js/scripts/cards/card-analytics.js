@@ -606,6 +606,94 @@ $(window).on("load", function(){
 
 
 
+    var salesavgChartoptions_hires = {
+        chart: {
+          height: 270,
+          toolbar: { show: false },
+          type: 'line',
+          dropShadow: {
+              enabled: true,
+              top: 20,
+              left: 2,
+              blur: 6,
+              opacity: 0.20
+          },
+        },
+        stroke: {
+            curve: 'smooth',
+            width: 4,
+        },
+        grid: {
+            borderColor: $label_color,
+        },
+        legend: {
+            show: false,
+        },
+       colors: [$purple],
+        fill: {
+            type: 'gradient',
+            gradient: {
+                shade: 'dark',
+                inverseColors: false,
+                gradientToColors: [$primary],
+                shadeIntensity: 1,
+                type: 'horizontal',
+                opacityFrom: 1,
+                opacityTo: 1,
+                stops: [0, 100, 100, 100]
+            },
+        },
+        markers: {
+            size: 0,
+            hover: {
+                size: 5
+            }
+        },
+        xaxis: {
+            labels: {
+                style: {
+                    colors: $strok_color,
+                }
+            },
+            axisTicks: {
+                show: false,
+            },
+            categories: ['Subco A', 'Subco B', 'Subco C', 'Subco D', 'Subco E', 'Subco F', 'Subco G', 'Subco H', 'Subco I', 'Subco J', 'Subco K'],
+            axisBorder: {
+                show: false,
+            },
+            tickPlacement: 'on'
+        },
+        yaxis: {
+            tickAmount: 5,
+            labels: {
+                style: {
+                    color: $strok_color,
+                },
+                formatter: function(val) {
+                    return val > 999 ? (val / 1000).toFixed(1) + 'k' : val;
+                }
+            }
+        },
+        tooltip: {
+            x: { show: false }
+        },
+        series: [{
+              name: "Retention payable",
+              data: [-59870.7, -2737.5, -2906.5, -640229.24, -18095.87, -8247, -41395.07, -200100.12, -1710542.79, -136848.75, -100113.93]
+          }],
+  
+      }
+  
+     var salesavgChart_hires = new ApexCharts(
+          document.querySelector("#sales-line-chart-hires"),
+          salesavgChartoptions_hires
+      );
+  
+      salesavgChart_hires.render();
+
+
+
 
     var salesavgChartoptions_subbal = {
         chart: {

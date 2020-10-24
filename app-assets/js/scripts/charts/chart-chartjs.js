@@ -108,7 +108,7 @@ $(window).on("load", function () {
   // ------------------------------------------
 
   //Get the context of the Chart canvas element we want to select
-  var barChartctx = $("#bar-chart");
+  var barChartctx = $("#bar-chart-capex");
 
   // Chart Options
   var barchartOptions = {
@@ -148,18 +148,18 @@ $(window).on("load", function () {
       }],
     },
     title: {
-      display: false,
-      text: 'Predicted world population (millions) in 2050'
+      display: true,
+      text: 'Capital Send (Top $5 m)'
     },
 
   };
 
   // Chart Data
   var barchartData = {
-    labels: ["Subco A", "Subco B", "Subco C", "Subco D", "Subco E", "Subco F", "Subco G", "Subco H", "Subco I", "Subco J", "Subco K"],
+    labels: ["Project 1", "Project 2", "Project 3", "Project 4", "Project 5"],
     datasets: [{
       label: "Net Payable",
-      data: [-19232.25, -1, -36051.65, 66172, -386233.2, -0.84, -11388.49, -1750, -0.64, -4907, -471687, ],
+      data: [124, 176, 152, 140, 122 ],
       backgroundColor: themeColors,
       borderColor: "transparent"
     }]

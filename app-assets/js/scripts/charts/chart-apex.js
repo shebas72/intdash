@@ -198,6 +198,49 @@ $(document).ready(function () {
   lineAreaChart.render();
 
 
+  var lineAreaOptionsquantity = {
+    chart: {
+      height: 350,
+      type: 'area',
+    },
+    colors: themeColors,
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth'
+    },
+    series: [{
+      name: 'CY',
+      data: [41, 37, 49, 43, 35, 33, 34, 37, 36, 33, 34, 35]
+    }, {
+      name: 'PY',
+      data: [35, 26, 33, 20, 35, 21, 35, 33, 33, 23, 25, 27]
+    }],
+    legend: {
+      offsetY: -10
+    },
+    xaxis: {
+      type: 'Month',
+      categories: ["Jan 2020", "Feb 2020", "Mar 2020", "Apr 2020", "May 2020", "Jun 2020", "Jul 2020", "Aug 2020", "Sep 2020", "Oct 2020", "Nov 2020", "Dec 2020"
+      ],
+    },
+    yaxis: {
+      opposite: yaxis_opposite
+    },
+    tooltip: {
+      x: {
+        format: 'dd/MM/yy HH:mm'
+      },
+    }
+  }
+  var lineAreaChartquantity = new ApexCharts(
+    document.querySelector("#line-area-chart-quantity"),
+    lineAreaOptionsquantity
+  );
+  lineAreaChartquantity.render();
+
+
 
   var lineAreaOptions_profit = {
     chart: {
@@ -265,20 +308,17 @@ $(document).ready(function () {
       colors: ['transparent']
     },
     series: [{
-      name: 'Volume',
-      data: [88000, 83000, 48000, 65000, 34000]
+      name: 'Hires',
+      data: [5, 11, 4, 5, 3, 6, 9, 14, 7, 4]
     }, {
-      name: 'Revenue',
-      data: [76, 85, 101, 98, 87]
-    }, {
-      name: 'Free Cash Flow',
-      data: [35, 41, 36, 26, 45]
+      name: 'Termination',
+      data: [7, 3, 3, 3, 2, 3, 3, 1, 1, 3]
     }],
     legend: {
       offsetY: -10
     },
     xaxis: {
-      categories: ['Household', 'Furniture', 'Hardware', 'Clothing', 'IT'],
+      categories: ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr'],
     },
     yaxis: {
       // title: {
@@ -305,6 +345,135 @@ $(document).ready(function () {
   );
 
   columnChart.render();
+
+
+
+  var columnChartOptions_control = {
+    chart: {
+      height: 350,
+      type: 'bar',
+    },
+    colors: themeColors,
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        endingShape: 'rounded',
+        columnWidth: '55%',
+      },
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      show: true,
+      width: 2,
+      colors: ['transparent']
+    },
+    series: [{
+      name: 'PY',
+      data: [12, 16, 19]
+    }, {
+      name: 'CY',
+      data: [14, 1, 22]
+    }],
+    legend: {
+      offsetY: -10
+    },
+    xaxis: {
+      categories: ['IT', 'HR', 'OPs'],
+    },
+    yaxis: {
+      // title: {
+      //   text: '$ (thousands)'
+      // },
+      opposite: yaxis_opposite
+    },
+    fill: {
+      opacity: 1
+
+    },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          // return "$ " + val + " thousands"
+          return  val 
+        }
+      }
+    }
+  }
+  var columnChart_control = new ApexCharts(
+    document.querySelector("#column-chart-control"),
+    columnChartOptions_control
+  );
+
+  columnChart_control.render();
+
+
+
+
+  var columnChartOptions_exp = {
+    chart: {
+      height: 350,
+      type: 'bar',
+    },
+    colors: themeColors,
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        endingShape: 'rounded',
+        columnWidth: '55%',
+      },
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      show: true,
+      width: 2,
+      colors: ['transparent']
+    },
+    series: [{
+      name: 'PY',
+      data: [776, 1005, 913, 776, 1096]
+    }, {
+      name: 'CY',
+      data: [1038, 849, 755, 1038, 1038]
+    }],
+    legend: {
+      offsetY: -10
+    },
+    xaxis: {
+      categories: ['Operations', 'Strategy', 'Finance', 'Commercial', 'HR'],
+    },
+    yaxis: {
+      // title: {
+      //   text: '$ (thousands)'
+      // },
+      opposite: yaxis_opposite
+    },
+    fill: {
+      opacity: 1
+
+    },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          // return "$ " + val + " thousands"
+          return  val 
+        }
+      }
+    }
+  }
+  var columnChart_exp = new ApexCharts(
+    document.querySelector("#column-chart-exp"),
+    columnChartOptions_exp
+  );
+
+  columnChart_exp.render();
+
+
+
+
 
   // Bar Chart
   // ----------------------------------
@@ -338,6 +507,39 @@ $(document).ready(function () {
     barChartOptions
   );
   barChart.render();
+
+
+
+  var barChartOptionsfte = {
+    chart: {
+      height: 350,
+      type: 'bar',
+    },
+    colors: themeColors,
+    plotOptions: {
+      bar: {
+        horizontal: true,
+      }
+    },
+    dataLabels: {
+      enabled: false
+    },
+    series: [{
+      data: [58, 35,  16, 9]
+    }],
+    xaxis: {
+      categories: ['Cardiff', 'Swansea', 'Newport',  'Llanelli'],
+      tickAmount: 5
+    },
+    yaxis: {
+      opposite: yaxis_opposite
+    }
+  }
+  var barChartfte = new ApexCharts(
+    document.querySelector("#bar-chart-fte"),
+    barChartOptionsfte
+  );
+  barChartfte.render();
 
 
 
@@ -923,41 +1125,7 @@ $(document).ready(function () {
         [7.1, 10.8],
         [2.1, 12]
       ]
-    }, {
-      name: "SAMPLE C",
-      data: [
-        [21.7, 3],
-        [23.6, 3.5],
-        [24.6, 3],
-        [29.9, 3],
-        [21.7, 20],
-        [23, 2],
-        [10.9, 3],
-        [28, 4],
-        [27.1, 0.3],
-        [16.4, 4],
-        [13.6, 0],
-        [19, 5],
-        [22.4, 3],
-        [24.5, 3],
-        [32.6, 3],
-        [27.1, 4],
-        [29.6, 6],
-        [31.6, 8],
-        [21.6, 5],
-        [20.9, 4],
-        [22.4, 0],
-        [32.6, 10.3],
-        [29.7, 20.8],
-        [24.5, 0.8],
-        [21.4, 0],
-        [21.7, 6.9],
-        [28.6, 7.7],
-        [15.4, 0],
-        [18.1, 0],
-        [33.4, 0],
-        [16.4, 0]
-      ]
+    
     }],
     legend: {
       offsetY: -10
@@ -1040,6 +1208,43 @@ $(document).ready(function () {
     pieChartOptions90
   );
   pieChart90.render();
+
+
+
+  var pieChartOptionscapex = {
+    chart: {
+      type: 'pie',
+      height: 350
+    },
+    colors: themeColors,
+    labels: ['EMP 1', 'EMP 2', 'EMP 3', 'EMP 4', 'EMP 5'],
+    series: [412, 405, 395, 389, 376],
+    legend: {
+      itemMargin: {
+        horizontal: 2
+      },
+    },
+    responsive: [{
+      breakpoint: 480,
+      options: {
+        chart: {
+          width: 350
+        },
+        legend: {
+          position: 'bottom'
+        }
+      }
+    }]
+  }
+  var pieChartcapex = new ApexCharts(
+    document.querySelector("#pie-chart-capex"),
+    pieChartOptionscapex
+  );
+  pieChartcapex.render();
+
+
+
+
 
   // Donut Chart
   // -----------------------------
