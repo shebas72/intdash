@@ -147,18 +147,14 @@ $current_page = PageName();
                      <ul class="dropdown-menu">
                         <li class="<?php echo $current_page == 'ebit.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="ebit.php" data-toggle="dropdown" data-i18n="apa"><i class="feather icon-activity"></i>Dashboard</a>
                             </li>
-                            <li class="<?php echo $current_page == 'net-payable.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="net-payable.php" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>Net Payable</a>
+                            <li class="<?php echo $current_page == 'actual-budget.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="actual-budget.php" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>Actual VS Budget</a>
                             </li>
-                            <li class="<?php echo $current_page == 'accounts-payable.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="accounts-payable.php" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>Accounts Payable</a>
-                            <li class="<?php echo $current_page == 'vendors.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="vendors.php" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>No. of Vendors</a>
-                            <li class="<?php echo $current_page == 'subco-balance.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="subco-balance.php" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>Subco Balance</a>
-                            <li class="<?php echo $current_page == 'sup-balance.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="sup-balance.php" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>Supplier Balance</a>
-                            <li class="<?php echo $current_page == 'ad-subco.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="ad-subco.php" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>Advance Due From Subco</a>
-                            </li>
-                            <li class="<?php echo $current_page == 'ret-subco.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="ret-subco.php" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>Retention Payable to Subco</a>
-                            </li>
-                           
-                        </ul>
+                            <li class="<?php echo $current_page == 'sales.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="sales.php" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>Sales Growth Vs % Profit</a>
+                            
+                            <li class="<?php echo $current_page == 'sales-quantity.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="sales-quantity.php" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>Sales quantity CY vs PY</a>
+                            <li class="<?php echo $current_page == 'expenditure.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="expenditure.php" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>Expenditure by Department</a>
+                            <li class="<?php echo $current_page == 'leave.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="leave.php" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>Leave Balance</a></li>
+                            </ul>
                      </li>
                      <li class="nav-item"><a class="dropdown-toggle nav-link" href="index.html" data-toggle="dropdown"><i class="feather icon-trending-up"></i><span data-i18n="Dashboard">Financial</span></a>
                      
