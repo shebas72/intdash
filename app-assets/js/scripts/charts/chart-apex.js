@@ -64,6 +64,52 @@ $(document).ready(function () {
 
 
 
+
+  var lineChartOptions_bankbalance = {
+    chart: {
+      height: 350,
+      type: 'line',
+      zoom: {
+        enabled: false
+      }
+    },
+    colors: themeColors,
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'straight'
+    },
+    series: [{
+      name: "Balance",
+      data: [-76466, -36413.89, 45266, 5000, 9529],
+    }],
+    title: {
+      text: 'Bank Balance',
+      align: 'left'
+    },
+    grid: {
+      row: {
+        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+        opacity: 0.5
+      },
+    },
+    xaxis: {
+      categories: ['Saudi Fransi', 'Saudi Hollandi', 'Riyadh Bank', 'SAMBA', 'NCB'],
+    },
+    yaxis: {
+      tickAmount: 5,
+      opposite: yaxis_opposite
+    }
+  }
+  var lineChartbankbalance = new ApexCharts(
+    document.querySelector("#line-chart-bankbalance"),
+    lineChartOptions_bankbalance
+  );
+  lineChartbankbalance.render();
+
+
+
   var lineChartOptions_advbal = {
     chart: {
       height: 350,
@@ -507,6 +553,103 @@ $(document).ready(function () {
     barChartOptions
   );
   barChart.render();
+
+
+  var barChartOptionsloan = {
+    chart: {
+      height: 350,
+      type: 'bar',
+    },
+    colors: themeColors,
+    plotOptions: {
+      bar: {
+        horizontal: true,
+      }
+    },
+    dataLabels: {
+      enabled: false
+    },
+    series: [{
+      data: [10392593, 7000000,  23875136, 10720861, 701130]
+    }],
+    xaxis: {
+      categories: ['Customer 5', 'Customer 9', 'Customer 11',  'Customer 16', 'Customer 20'],
+      tickAmount: 5
+    },
+    yaxis: {
+      opposite: yaxis_opposite
+    }
+  }
+  var barChartloan = new ApexCharts(
+    document.querySelector("#bar-chart-loan"),
+    barChartOptionsloan
+  );
+  barChartloan.render();
+
+
+
+  var barChartOptionspp = {
+    chart: {
+      height: 350,
+      type: 'bar',
+    },
+    colors: themeColors,
+    plotOptions: {
+      bar: {
+        horizontal: true,
+      }
+    },
+    dataLabels: {
+      enabled: false
+    },
+    series: [{
+      data: [66172, 386233,  471687, 19232, 409862, 2216238, 43823, 1114445, 35279, 49565, 150796]
+    }],
+    xaxis: {
+      categories: ['Subco D', 'Subco E', 'Subco K',  'Subco A', 'Supp F', 'Supp A', 'Supp B', 'Supp C', 'Supp L', 'Supp M', 'Supp N'],
+      tickAmount: 5
+    },
+    yaxis: {
+      opposite: yaxis_opposite
+    }
+  }
+  var barChartpp = new ApexCharts(
+    document.querySelector("#bar-chart-pp"),
+    barChartOptionspp
+  );
+  barChartpp.render();
+
+
+  var barChartOptionsep = {
+    chart: {
+      height: 350,
+      type: 'bar',
+    },
+    colors: themeColors,
+    plotOptions: {
+      bar: {
+        horizontal: true,
+      }
+    },
+    dataLabels: {
+      enabled: false
+    },
+    series: [{
+      data: [7153420, 4252303,  3960898, 3486562, 2172314, 1900000, 1759411, 1500000, 1077547]
+    }],
+    xaxis: {
+      categories: ['Customer D', 'Customer E', 'Customer K',  'Customer A', 'Customer F', 'Customer A', 'Customer B', 'Customer C', 'Customer L'],
+      tickAmount: 5
+    },
+    yaxis: {
+      opposite: yaxis_opposite
+    }
+  }
+  var barChartep = new ApexCharts(
+    document.querySelector("#bar-chart-ep"),
+    barChartOptionsep
+  );
+  barChartep.render();
 
 
 
@@ -1178,6 +1321,39 @@ $(document).ready(function () {
   pieChart.render();
 
 
+
+  var pieChartOptionsloan = {
+    chart: {
+      type: 'pie',
+      height: 350
+    },
+    colors: themeColors,
+    labels: ['SHB Loans', 'Saudi Fransi Loans', 'NCB Loans'],
+    series: [295539, 1439025, 195812],
+    legend: {
+      itemMargin: {
+        horizontal: 2
+      },
+    },
+    responsive: [{
+      breakpoint: 480,
+      options: {
+        chart: {
+          width: 350
+        },
+        legend: {
+          position: 'bottom'
+        }
+      }
+    }]
+  }
+  var pieChartloan = new ApexCharts(
+    document.querySelector("#pie-chart-loan"),
+    pieChartOptionsloan
+  );
+  pieChartloan.render();
+
+
   var pieChartOptions90 = {
     chart: {
       type: 'pie',
@@ -1208,6 +1384,70 @@ $(document).ready(function () {
     pieChartOptions90
   );
   pieChart90.render();
+
+
+  var pieChartOptionsodsf = {
+    chart: {
+      type: 'pie',
+      height: 350
+    },
+    colors: themeColors,
+    labels: ['Limit', 'Utilized'],
+    series: [500000, 76466],
+    legend: {
+      itemMargin: {
+        horizontal: 2
+      },
+    },
+    responsive: [{
+      breakpoint: 480,
+      options: {
+        chart: {
+          width: 350
+        },
+        legend: {
+          position: 'bottom'
+        }
+      }
+    }]
+  }
+  var pieChartodsf = new ApexCharts(
+    document.querySelector("#pie-chart-odsf"),
+    pieChartOptionsodsf
+  );
+  pieChartodsf.render();
+
+
+  var pieChartOptionsodsh = {
+    chart: {
+      type: 'pie',
+      height: 350
+    },
+    colors: themeColors,
+    labels: ['Limit', 'Utilized'],
+    series: [100000, 36413],
+    legend: {
+      itemMargin: {
+        horizontal: 2
+      },
+    },
+    responsive: [{
+      breakpoint: 480,
+      options: {
+        chart: {
+          width: 350
+        },
+        legend: {
+          position: 'bottom'
+        }
+      }
+    }]
+  }
+  var pieChartodsh = new ApexCharts(
+    document.querySelector("#pie-chart-odsh"),
+    pieChartOptionsodsh
+  );
+  pieChartodsh.render();
 
 
 

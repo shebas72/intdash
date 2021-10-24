@@ -139,9 +139,21 @@ $current_page = PageName();
                      
                     </li>
 
-                    <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="index.html" data-toggle="dropdown"><i class="feather icon-file-text"></i><span data-i18n="Dashboard">Daily Bank Position</span></a>
-                     
+                    <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="bank.php" data-toggle="dropdown"><i class="feather icon-file-text"></i><span data-i18n="bank">Daily Bank Position</span></a>
+                    <ul class="dropdown-menu">
+                        <li class="<?php echo $current_page == 'bank.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="bank.php" data-toggle="dropdown" data-i18n="apa"><i class="feather icon-activity"></i>Dashboard</a>
+                            </li>
+                            <li class="<?php echo $current_page == 'bank-position.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="bank-position.php" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>Bank Position</a>
+                            </li>
+                            <li class="<?php echo $current_page == 'proposed-payment.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="proposed-payment.php" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>Proposed Payment</a>
+                            
+                            <li class="<?php echo $current_page == 'expected-receipts.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="expected-receipts.php" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>Expected Receipt</a>
+                            <li class="<?php echo $current_page == 'overdraft.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="overdraft.php" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>Overdraft</a>
+                            <li class="<?php echo $current_page == 'bank-loans.php' ? 'active':NULL ?>" data-menu=""><a class="dropdown-item" href="bank-loans.php" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>Bank Loans</a></li>
+                            </ul>
                      </li>
+
+                   
 
                      <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="ebit.php" data-toggle="dropdown"><i class="feather icon-percent"></i><span data-i18n="ebit">EBIT</span></a>
                      <ul class="dropdown-menu">
